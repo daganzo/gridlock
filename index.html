@@ -36,7 +36,6 @@
                     <span class="icon-bar"></span>
                 </button>
                 <div class="navbar-brand">
-                    <img src="textonlylogo300pi.png" alt="" style="margin-top:-15px;">
                     <span style="font-size: 26px; font-color: #2c3e50"> The Nature of Urban Traffic Gridlock</span>
                 </div>
             </div>
@@ -46,7 +45,7 @@
 
     <div class="container" ng-controller="mainCtrl">
 
-        <div class="row col-sm-8">
+        <div class="row col-lg-8">
             <p>The diagram below depicts a one-lane ring road with four segments. It can be animated to describe the physics of gridlock. Click "Play" button below at any time to start.</p>
 
             <ul>
@@ -86,7 +85,7 @@
             </ul>
         </div>
 
-        <div ng-controller="ModalCtrl as modal" class="row col-sm-9 btn-group" style="margin-bottom: 30px;">
+        <div ng-controller="ModalCtrl as modal" class="row col-lg-9 btn-group" style="margin-bottom: 30px;">
             <button class="btn btn-success" ng-click="modal.open('toTry')">What to try</button>
             <button class="btn btn-success" ng-click="modal.open('patterns')">Patterns to notice</button>
             <button class="btn btn-success" ng-click="modal.open('application')">Real-world applications</button>
@@ -94,14 +93,14 @@
         </div>
 
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-lg-6">
                 <div infrastructure></div>
                 <div class="row col-md-offset-2" style="margin-top: 10px;">
                     <button style="width: 40%" class="btn btn-med {{ timer.isPaused() ? 'btn-success' : 'btn-warning' }}" ng-click="timer.pause()">{{timer.isPaused() ? "Play" : "Pause"}}</button>
                     <button style="width: 40%" class="btn btn-med btn-danger" ng-click="reset()">Reset</button>
                 </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-lg-6">
                 <div bar-chart></div>
                 <h5>Simulation Speed</h5>
                 <div class="slider" ui-slider="{orientation: 'horizontal', step: 5,  labeled: false}" min="10" max="60" ng-model="timer.velocity"></div>
